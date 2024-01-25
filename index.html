@@ -20,19 +20,19 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date()
+      dateObj = new Date("2024-01-25T08:23:12")
       async function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          console.log(item)
-         if(parseInt(time)>parseInt(item.endTime.replace(':', '')) || lessonNumber > 2){return}
+         if(parseInt(time)>parseInt(item.endTime.replace(':', '')) || lessonNumber > 3){return}
          if(parseInt(time)<parseInt(item.endTime.replace(':', '')) && parseInt(time)>parseInt(item.startTime.replace(':', ''))){lessonNumber=0}
          console.log(lessonNumber)
          const lesson = document.getElementById("lesson"+lessonNumber)
          if(lessonNumber==0){
             lesson.children[0].innerHTML = item.title
             lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
-            console.log(item.endTime)
-            lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(item.end)-dateObj))
+            console.log(new Date().toISOString().slice(10, -9))
+            lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(item.end).getMilliseconds()-dateObj.getMilliseconds()))
             lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
             lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
          }else{
