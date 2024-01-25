@@ -8,6 +8,7 @@
          item.innerHTML = "NO SCHOOL"
       }
       function msToReadableTime(duration) {
+         console.log(duration)
          var milliseconds = Math.floor((duration % 1000) / 100),
          minutes = Math.floor((duration / (1000 * 60)) % 60),
          hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
@@ -31,8 +32,8 @@
          if(lessonNumber==0){
             lesson.children[0].innerHTML = item.title
             lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
-            console.log(new Date().toISOString().slice(10, -9))
-            lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(item.end).getMilliseconds()-dateObj.getMilliseconds()))
+            console.log(new Date(dateObj.toISOString().slice(0, -14)+item.end))
+            lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
             lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
             lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
          }else{
@@ -40,7 +41,7 @@
             lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
             lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
             lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
-            lesson.children[2].innerHTML = "starts in "+msToReadableTime(new Date(item.end)-dateObj)
+            lesson.children[2].innerHTML = "starts in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
          }
          lessonNumber++
       }
