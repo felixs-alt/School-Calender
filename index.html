@@ -1,6 +1,9 @@
 <head>
    <link rel="stylesheet" href="index.css">
    <script>
+      async function noschool(item){
+         item.innerHTML = "NO SCHOOL"
+      }
       function msToReadableTime(duration) {
          var milliseconds = Math.floor((duration % 1000) / 100),
          minutes = Math.floor((duration / (1000 * 60)) % 60),
@@ -46,6 +49,9 @@
          date.innerHTML = dateObj.toDateString()
          time.innerHTML = "Lomma "+ dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })
          if (dateObj.getDay() % 6 === 0){
+            for (let i = 0; i < 4; i++) {
+               Array.from(document.getElementById("lesson"+i).children).forEach(noschool);
+            }; 
             return
          } else {
             today = table[dateObj.getDay()-1]
