@@ -2,8 +2,8 @@
 [
     {
         "title": "Mentorstid",
-        "startTime": "0900",
-        "endTime": "0950",
+        "startTime": "09:00",
+        "endTime": "09:50",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
@@ -15,8 +15,8 @@
     },
     {
         "title": "Ma",
-        "startTime": "0955",
-        "endTime": "1055",
+        "startTime": "09:55",
+        "endTime": "10:55",
         "notes": {
             "roomInfo": "D4",
             "timetableNotes": "",
@@ -28,8 +28,8 @@
     },
     {
         "title": "So",
-        "startTime": "1105",
-        "endTime": "1215",
+        "startTime": "11:05",
+        "endTime": "12:15",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
@@ -41,8 +41,8 @@
     },
     {
         "title": "Lunch",
-        "startTime": "1215",
-        "endTime": "1245",
+        "startTime": "12:15",
+        "endTime": "12:45",
         "notes": {
             "roomInfo": "",
             "timetableNotes": "",
@@ -54,8 +54,8 @@
     },
     {
         "title": "Idh",
-        "startTime": "1300",
-        "endTime": "1355",
+        "startTime": "13:00",
+        "endTime": "13:55",
         "notes": {
             "roomInfo": "Hall 3",
             "timetableNotes": "",
@@ -67,8 +67,8 @@
     },
     {
         "title": "Sv",
-        "startTime": "1415",
-        "endTime": "1515",
+        "startTime": "14:15",
+        "endTime": "15:15",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
@@ -80,8 +80,8 @@
     },
     {
         "title": "En",
-        "startTime": "0850",
-        "endTime": "0945",
+        "startTime": "08:50",
+        "endTime": "09:45",
         "notes": {
             "roomInfo": "338",
             "timetableNotes": "",
@@ -93,8 +93,8 @@
     },
     {
         "title": "Sv",
-        "startTime": "0950",
-        "endTime": "1040",
+        "startTime": "09:50",
+        "endTime": "10:40",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
@@ -106,8 +106,8 @@
     },
     {
         "title": "Idh",
-        "startTime": "1050",
-        "endTime": "1145",
+        "startTime": "10:50",
+        "endTime": "11:45",
         "notes": {
             "roomInfo": "Hall 2",
             "timetableNotes": "",
@@ -119,8 +119,8 @@
     },
     {
         "title": "Lunch",
-        "startTime": "1205",
-        "endTime": "1230",
+        "startTime": "12:05",
+        "endTime": "12:30",
         "notes": {
             "roomInfo": "",
             "timetableNotes": "",
@@ -132,8 +132,8 @@
     },
     {
         "title": "No",
-        "startTime": "1230",
-        "endTime": "1355",
+        "startTime": "12:30",
+        "endTime": "13:55",
         "notes": {
             "roomInfo": "D4",
             "timetableNotes": "",
@@ -145,8 +145,8 @@
     },
     {
         "title": "Ma",
-        "startTime": "1410",
-        "endTime": "1505",
+        "startTime": "14:10",
+        "endTime": "15:05",
         "notes": {
             "roomInfo": "D1",
             "timetableNotes": "",
@@ -158,8 +158,8 @@
     },
     {
         "title": "Läxhjälp",
-        "startTime": "1500",
-        "endTime": "1600",
+        "startTime": "15:00",
+        "endTime": "16:00",
         "notes": {
             "roomInfo": "328",
             "timetableNotes": "",
@@ -173,8 +173,8 @@
 [
     {
         "title": "Sltm - Sltx",
-        "startTime": "0800",
-        "endTime": "0920",
+        "startTime": "08:00",
+        "endTime": "09:20",
         "notes": {
             "roomInfo": "Q4 - Q1",
             "timetableNotes": "",
@@ -186,8 +186,8 @@
     },
     {
         "title": "No",
-        "startTime": "0930",
-        "endTime": "1040",
+        "startTime": "09:30",
+        "endTime": "10:40",
         "notes": {
             "roomInfo": "D7",
             "timetableNotes": "",
@@ -199,8 +199,8 @@
     },
     {
         "title": "So",
-        "startTime": "1045",
-        "endTime": "1150",
+        "startTime": "10:45",
+        "endTime": "11:50",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
@@ -212,8 +212,8 @@
     },
     {
         "title": "Lunch",
-        "startTime": "1150",
-        "endTime": "1235",
+        "startTime": "11:50",
+        "endTime": "12:35",
         "notes": {
             "roomInfo": "",
             "timetableNotes": "",
@@ -225,8 +225,8 @@
     },
     {
         "title": "En",
-        "startTime": "1235",
-        "endTime": "1325",
+        "startTime": "12:35",
+        "endTime": "13:25",
         "notes": {
             "roomInfo": "244",
             "timetableNotes": "",
@@ -238,8 +238,8 @@
     },
     {
         "title": "Bdf",
-        "startTime": "1335",
-        "endTime": "1435",
+        "startTime": "13:35",
+        "endTime": "14:35",
         "notes": {
             "roomInfo": "Q6",
             "timetableNotes": "",
@@ -253,8 +253,8 @@
 [
     {
         "title": "En",
-        "startTime": "0800",
-        "endTime": "0855",
+        "startTime": "08:00",
+        "endTime": "08:55",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
@@ -266,8 +266,8 @@
     },
     {
         "title": "Ma",
-        "startTime": "0910",
-        "endTime": "1005",
+        "startTime": "09:10",
+        "endTime": "10:05",
         "notes": {
             "roomInfo": "D1",
             "timetableNotes": "",
@@ -279,8 +279,8 @@
     },
     {
         "title": "Mu",
-        "startTime": "1025",
-        "endTime": "1155",
+        "startTime": "10:25",
+        "endTime": "11:55",
         "notes": {
             "roomInfo": "Q5",
             "timetableNotes": "",
@@ -292,8 +292,8 @@
     },
     {
         "title": "Lunch",
-        "startTime": "1205",
-        "endTime": "1235",
+        "startTime": "12:05",
+        "endTime": "12:35",
         "notes": {
             "roomInfo": "",
             "timetableNotes": "",
@@ -305,8 +305,8 @@
     },
     {
         "title": "So",
-        "startTime": "1240",
-        "endTime": "1345",
+        "startTime": "12:40",
+        "endTime": "13:45",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
@@ -318,8 +318,8 @@
     },
     {
         "title": "Sv",
-        "startTime": "1350",
-        "endTime": "1445",
+        "startTime": "13:50",
+        "endTime": "14:45",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
@@ -331,8 +331,8 @@
     },
     {
         "title": "Läxhjälp",
-        "startTime": "1415",
-        "endTime": "1525",
+        "startTime": "14:15",
+        "endTime": "15:25",
         "notes": {
             "roomInfo": "328",
             "timetableNotes": "",
@@ -346,8 +346,8 @@
 [
     {
         "title": "En",
-        "startTime": "0800",
-        "endTime": "0900",
+        "startTime": "08:00",
+        "endTime": "09:00",
         "notes": {
             "roomInfo": "338",
             "timetableNotes": "",
@@ -359,8 +359,8 @@
     },
     {
         "title": "Idh",
-        "startTime": "0915",
-        "endTime": "1005",
+        "startTime": "09:15",
+        "endTime": "10:05",
         "notes": {
             "roomInfo": "Hall 1",
             "timetableNotes": "",
@@ -372,8 +372,8 @@
     },
     {
         "title": "No",
-        "startTime": "1025",
-        "endTime": "1140",
+        "startTime": "10:25",
+        "endTime": "11:40",
         "notes": {
             "roomInfo": "D7",
             "timetableNotes": "",
@@ -385,8 +385,8 @@
     },
     {
         "title": "Lunch",
-        "startTime": "1140",
-        "endTime": "1210",
+        "startTime": "11:40",
+        "endTime": "12:10",
         "notes": {
             "roomInfo": "",
             "timetableNotes": "",
@@ -398,8 +398,8 @@
     },
     {
         "title": "Ma",
-        "startTime": "1210",
-        "endTime": "1305",
+        "startTime": "12:10",
+        "endTime": "13:05",
         "notes": {
             "roomInfo": "D1",
             "timetableNotes": "",
@@ -411,8 +411,8 @@
     },
     {
         "title": "En",
-        "startTime": "1315",
-        "endTime": "1400",
+        "startTime": "13:15",
+        "endTime": "14:00",
         "notes": {
             "roomInfo": "250",
             "timetableNotes": "",
