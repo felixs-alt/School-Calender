@@ -14,7 +14,7 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date("2024-01-26T08:13:00")
+      dateObj = new Date()
       async function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          console.log(item)
