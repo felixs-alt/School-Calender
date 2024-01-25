@@ -1,0 +1,426 @@
+[
+[
+    {
+        "title": "Mentorstid",
+        "startTime": "09:00",
+        "endTime": "09:50",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Jacobsson, Anne , Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    },
+    {
+        "title": "Ma",
+        "startTime": "09:55",
+        "endTime": "10:55",
+        "notes": {
+            "roomInfo": "D4",
+            "timetableNotes": "",
+            "tutors": "Björndahl, Maria "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "D4"
+    },
+    {
+        "title": "So",
+        "startTime": "11:05",
+        "endTime": "12:15",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    },
+    {
+        "title": "Lunch",
+        "startTime": "12:15",
+        "endTime": "12:45",
+        "notes": {
+            "roomInfo": "",
+            "timetableNotes": "",
+            "tutors": ""
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": ""
+    },
+    {
+        "title": "Idh",
+        "startTime": "13:00",
+        "endTime": "13:55",
+        "notes": {
+            "roomInfo": "Hall 3",
+            "timetableNotes": "",
+            "tutors": "Törnell, Jonathan "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "Hall 3"
+    },
+    {
+        "title": "Sv",
+        "startTime": "14:15",
+        "endTime": "15:15",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    },
+    {
+        "title": "En",
+        "startTime": "08:50",
+        "endTime": "09:45",
+        "notes": {
+            "roomInfo": "338",
+            "timetableNotes": "",
+            "tutors": "Jacobsson, Anne "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "338"
+    },
+    {
+        "title": "Sv",
+        "startTime": "09:50",
+        "endTime": "10:40",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    },
+    {
+        "title": "Idh",
+        "startTime": "10:50",
+        "endTime": "11:45",
+        "notes": {
+            "roomInfo": "Hall 2",
+            "timetableNotes": "",
+            "tutors": "Törnell, Jonathan "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "Hall 2"
+    },
+    {
+        "title": "Lunch",
+        "startTime": "12:05",
+        "endTime": "12:30",
+        "notes": {
+            "roomInfo": "",
+            "timetableNotes": "",
+            "tutors": ""
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": ""
+    },
+    {
+        "title": "No",
+        "startTime": "12:30",
+        "endTime": "13:55",
+        "notes": {
+            "roomInfo": "D4",
+            "timetableNotes": "",
+            "tutors": "Björndahl, Maria "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "D4"
+    },
+    {
+        "title": "Ma",
+        "startTime": "14:10",
+        "endTime": "15:05",
+        "notes": {
+            "roomInfo": "D1",
+            "timetableNotes": "",
+            "tutors": "Björndahl, Maria "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "D1"
+    },
+    {
+        "title": "Läxhjälp",
+        "startTime": "15:00",
+        "endTime": "16:00",
+        "notes": {
+            "roomInfo": "328",
+            "timetableNotes": "",
+            "tutors": ""
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "328"
+    }
+], 
+[
+    {
+        "title": "Sltm - Sltx",
+        "startTime": "08:00",
+        "endTime": "09:20",
+        "notes": {
+            "roomInfo": "Q4 - Q1",
+            "timetableNotes": "",
+            "tutors": "Ander, Måns , Hedberg, Annica "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "Q4 - Q1"
+    },
+    {
+        "title": "No",
+        "startTime": "09:30",
+        "endTime": "10:40",
+        "notes": {
+            "roomInfo": "D7",
+            "timetableNotes": "",
+            "tutors": "Björndahl, Maria "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "D7"
+    },
+    {
+        "title": "So",
+        "startTime": "10:45",
+        "endTime": "11:50",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    },
+    {
+        "title": "Lunch",
+        "startTime": "11:50",
+        "endTime": "12:35",
+        "notes": {
+            "roomInfo": "",
+            "timetableNotes": "",
+            "tutors": ""
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": ""
+    },
+    {
+        "title": "En",
+        "startTime": "12:35",
+        "endTime": "13:25",
+        "notes": {
+            "roomInfo": "244",
+            "timetableNotes": "",
+            "tutors": "Liljegren, Bengt , Svensson, Jenny "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "244"
+    },
+    {
+        "title": "Bdf",
+        "startTime": "13:35",
+        "endTime": "14:35",
+        "notes": {
+            "roomInfo": "Q6",
+            "timetableNotes": "",
+            "tutors": "Löfgren Eriksson, Fredrik "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "Q6"
+    }
+],
+[
+    {
+        "title": "En",
+        "startTime": "08:00",
+        "endTime": "08:55",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Liljegren, Bengt , Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    },
+    {
+        "title": "Ma",
+        "startTime": "09:10",
+        "endTime": "10:05",
+        "notes": {
+            "roomInfo": "D1",
+            "timetableNotes": "",
+            "tutors": "Björndahl, Maria "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "D1"
+    },
+    {
+        "title": "Mu",
+        "startTime": "10:25",
+        "endTime": "11:55",
+        "notes": {
+            "roomInfo": "Q5",
+            "timetableNotes": "",
+            "tutors": "Nilson, Joel "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "Q5"
+    },
+    {
+        "title": "Lunch",
+        "startTime": "12:05",
+        "endTime": "12:35",
+        "notes": {
+            "roomInfo": "",
+            "timetableNotes": "",
+            "tutors": ""
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": ""
+    },
+    {
+        "title": "So",
+        "startTime": "12:40",
+        "endTime": "13:45",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    },
+    {
+        "title": "Sv",
+        "startTime": "13:50",
+        "endTime": "14:45",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    },
+    {
+        "title": "Läxhjälp",
+        "startTime": "14:15",
+        "endTime": "15:25",
+        "notes": {
+            "roomInfo": "328",
+            "timetableNotes": "",
+            "tutors": ""
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "328"
+    }
+],
+[
+    {
+        "title": "En",
+        "startTime": "08:00",
+        "endTime": "09:00",
+        "notes": {
+            "roomInfo": "338",
+            "timetableNotes": "",
+            "tutors": "Jacobsson, Anne "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "338"
+    },
+    {
+        "title": "Idh",
+        "startTime": "09:15",
+        "endTime": "10:05",
+        "notes": {
+            "roomInfo": "Hall 1",
+            "timetableNotes": "",
+            "tutors": "Törnell, Jonathan "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "Hall 1"
+    },
+    {
+        "title": "No",
+        "startTime": "10:25",
+        "endTime": "11:40",
+        "notes": {
+            "roomInfo": "D7",
+            "timetableNotes": "",
+            "tutors": "Björndahl, Maria "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "D7"
+    },
+    {
+        "title": "Lunch",
+        "startTime": "11:40",
+        "endTime": "12:10",
+        "notes": {
+            "roomInfo": "",
+            "timetableNotes": "",
+            "tutors": ""
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": ""
+    },
+    {
+        "title": "Ma",
+        "startTime": "12:10",
+        "endTime": "13:05",
+        "notes": {
+            "roomInfo": "D1",
+            "timetableNotes": "",
+            "tutors": "Björndahl, Maria "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "D1"
+    },
+    {
+        "title": "En",
+        "startTime": "13:15",
+        "endTime": "14:00",
+        "notes": {
+            "roomInfo": "250",
+            "timetableNotes": "",
+            "tutors": "Kulle, Sia , Melvinger, Jonas "
+        },
+        "allDay": false,
+        "establishmentName": null,
+        "details": "250"
+    }
+]
+]
