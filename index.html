@@ -1,6 +1,9 @@
 <head>
    <link rel="stylesheet" href="index.css">
    <script>
+      async function schoolover(item){
+         item.innerHTML = "SCHOOLS OVER"
+      }
       async function noschool(item){
          item.innerHTML = "NO SCHOOL"
       }
@@ -58,6 +61,11 @@
          }
          console.log(table)
          lessonNumber=0
+         if((dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')>parseInt(today[today.length - 1].endTime.replace(':', ''))){
+            for (let i = 0; i < 4; i++) {
+               Array.from(document.getElementById("lesson"+i).children).forEach(schoolover);
+            }; 
+         }
          await today.forEach(updateTable)
       }
       async function updateWeather(){
