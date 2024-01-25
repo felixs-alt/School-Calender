@@ -111,19 +111,7 @@ body {
   font-weight: 300;
   position: absolute;
 }
-.today-box .breadcrumb::after {
-  content: "";
-  font-family: "Ionicons";
-  vertical-align: middle;
-  font-size: 12px;
-  font-weight: 100;
-  display: inline-block;
-  color: #fff;
-  text-align: center;
-  position: absolute;
-  left: 45px;
-  top: 3px;
-}
+
 .today-box .date-title {
   display:inline-block;
   font-size: 20px;
@@ -141,7 +129,7 @@ body {
 .upcoming-events .container h3::before {
   content: "";
   display: block;
-  width: 58%;
+  width: 75%;
   height: 2px;
   background-color: #e8e8e8;
   position: absolute;
@@ -149,22 +137,7 @@ body {
   transform: translatey(-60%);
   right: 0;
 }
-.upcoming-events .container h3::after {
-  content: "";
-  font-family: "Ionicons";
-  color: rgba(0, 0, 0, 0.1);
-  vertical-align: middle;
-  font-size: 36px;
-  font-weight: 100;
-  display: inline-block;
-  background: #fff;
-  color: #919294;
-  width: 38px;
-  text-align: center;
-  position: absolute;
-  right: 60px;
-  top: -10px;
-}
+
 .upcoming-events .container .events-wrapper {
   margin-bottom: 30px;
 }
@@ -228,19 +201,7 @@ body {
   left: 25px;
   top: 17px;
 }
-.upcoming-events .container .events-wrapper .event.active .event__description::before, .upcoming-events .container .events-wrapper .event.active .event__description::after {
-  content: "";
-  font-family: "Ionicons";
-  font-size: 32px;
-  display: inline-block;
-  color: #919294;
-  text-align: center;
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
+
 .upcoming-events .container .events-wrapper .event.active .event__description::before {
   right: 45px;
   font-size: 22px;
@@ -251,5 +212,19 @@ body {
   transform: translate(15px, -12px);
 }
 .weather{
+   position: relative;
+   height: 100px;
    display:inline-block;padding-left: 40px;
+   background: linear-gradient(45deg,#8373c6, #77d3b9);
+   border-radius: 10px;
+   margin-left: 20px;
+}
+.weather img {
+  position:absolute;
+  right: 15px;
+  bottom: 20px;
+}
+.weather h3 {
+  padding-top: 50px;
+  padding-right: 10px;
 }

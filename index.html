@@ -1,46 +1,61 @@
 <head>
    <link rel="stylesheet" href="index.css">
    <script>
+      dateObj = new Date("January 26, 2024 08:13:00")
       async function updateTable(item,index){
-         const time = (new Date().toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
-         console.log(time+" "+(parseInt(item.endTime.replace(':', ''))+700))
-         if(time>(parseInt(item.endTime.replace(':', ''))+700)){console.log("j");return}
-         if (time<parseInt(item.endTime.replace(':', ''))){
-            console.log("d")
-            const lesson = document.getElementById("lesson"+lessonNumber)
-            lessonNumber=+1
-            console.log(lesson.children)
-            lesson.children[0].innerHTML = item.startTime
-            var nowDateTime = new Date().toISOString();
+         const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
+         console.log(item)
+         if(time>>parseInt(item.endTime.replace(':', ''))){return}
+         const lesson = document.getElementById("lesson"+lessonNumber)
+         lesson.style.fontFamily  = `"Lato", sans-serif`
+         if (lessonNumber==0){
+            lesson.children[0].innerHTML = item.title
+            lesson.children[0].style.fontFamily  = `"Lato", sans-serif`
+            lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
+            var nowDateTime = dateObj.toISOString();
             var nowDate = nowDateTime.split('T')[0];
             var hms = item.startTime+':00';
             var target = new Date(nowDate + 'T' + hms);
-            lesson.children[1].innerHTML = "in "+target.getMinutes()+" minutes"
-
+            lesson.children[2].innerHTML = "ends in "+target.getMinutes()+" minutes"
+            lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
+            lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
+         }else{
+            lesson.children[0].innerHTML = item.title
+            lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
+            lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
+            lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
+            var nowDateTime = dateObj.toISOString();
+            var nowDate = nowDateTime.split('T')[0];
+            var hms = item.startTime+':00';
+            var target = new Date(nowDate + 'T' + hms);
+            lesson.children[2].innerHTML = "starts in "+target.getMinutes()+" minutes"
          }
+         lessonNumber=+1
       }
       async function update(){
          const response = await fetch("https://felixs-alt.github.io/School-Calender/table.json");
          const table = await response.json();
          const time = document.getElementById("time")
          const date = document.getElementById("date")
-         date.innerHTML = new Date().toDateString()
-         time.innerHTML = new Date().toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })
-         if (new Date().getDay() % 6 === 0){
+         date.innerHTML = dateObj.toDateString()
+         time.innerHTML = dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })
+         if (dateObj.getDay() % 6 === 0){
             return
          } else {
-            today = table[new Date().getDay()-1]
+            today = table[dateObj.getDay()-1]
          }
+         console.log(table)
          lessonNumber=0
          await today.forEach(updateTable)
+         document.body.style.fontFamily  = `"Lato", sans-serif`
       }
       async function updateWeather(){
          let response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Lomma,se&appid=3ab048a5dff57c50e864e1484411f691') //you get your api key once you sign up for openweathermap.org
          weatherData = await response.json()
          const icon = document.getElementById("weather-icon")
          const temp = document.getElementById("temp")
-         icon.src = "https://openweathermap.org/img/wn/"+weatherData.weather[0].icon+".png"
-         temp.innerHTML=(Math.round((weatherData.main.temp - 273.15) * 100) / 100)+"C"
+         icon.src = "https://openweathermap.org/img/wn/"+weatherData.weather[0].icon+"@2x.png"
+         temp.innerHTML=(Math.round((weatherData.main.temp - 273.15) * 100) / 100)+"°C"
       }
       window.addEventListener("load", async (event) => {
          await setInterval(updateWeather(),300000)
@@ -65,7 +80,7 @@
       <h3 class="date-title"id="date"></h3>
       <div class="weather">
          <img id="weather-icon"></img>
-         <h4 id="temp"></h4>
+         <h3 id="temp"></h3>
       </div>
    </section>
 
@@ -74,42 +89,42 @@
    <section class="upcoming-events">
       <div class="container">
          <h3>
-            Lastest Events
-
+            Lessons
          </h3>
          <div class="events-wrapper">
             <div id="lesson0" class="event active">
-               <h4 class="event__point"></h4>
+               <h5 class="event__point"></h5>
+               <p class="event__time"></p>
                <span class="event__duration"></span>
-               <p class="event__description">
-               </p>
+               <p class="event__description"></p>
+               <p class="event__description"></p>
             </div>
             <div id="lesson1"class="event">
-               <h4 class="event__point">12:00 pm</h4>
-               <span class="event__duration">in 1 hour.</span>
-               <p class="event__description">
-                  Lunch with Paul Mccartney @Burgers House!
-               </p>
+               <h5 class="event__point"></h5>
+               <p class="event__time"></p>
+               <span class="event__duration"></span>
+               <p class="event__description"></p>
+               <p class="event__description"></p>
             </div>
             <div id="lesson2" class="event">
-               <h4 class="event__point">14:00 pm</h4>
-               <p class="event__description">
-                  Meet clients from project.
-               </p>
+               <h5 class="event__point"></h5>
+               <p class="event__time"></p>
+               <p class="event__description"></p>
+               <p class="event__description"></p>
             </div>
             <div id="lesson3"class="event">
-               <h4 class="event__point">20:45 pm</h4>
-               <span class="event__duration">in 45 minutes.</span>
-               <p class="event__description">
-                  Watch sci-fi series.
-               </p>
+               <h5 class="event__point"></h5>
+               <p class="event__time"></p>
+               <span class="event__duration"></span>
+               <p class="event__description"></p>
+               <p class="event__description"></p>
             </div>
             <div id="lesson4" class="event">
-               <h4 class="event__point">23:15 pm</h4>
+               <h5 class="event__point"></h5>
+               <p class="event__time"></p>
                <span class="event__duration">in 20 minutes.</span>
-               <p class="event__description">
-                  Customer dialog on Skype.
-               </p>
+               <p class="event__description"></p>
+               <p class="event__description"></p>
             </div>
          </div>
       </div>
