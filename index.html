@@ -22,7 +22,7 @@
          }
       }
       dateObj = new Date("2024-01-25T08:23:12")
-      async function updateTable(item,index){
+      function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          console.log(item)
          if(parseInt(time)>parseInt(item.endTime.replace(':', '')) || lessonNumber > 3){return}
@@ -67,7 +67,7 @@
                Array.from(document.getElementById("lesson"+i).children).forEach(schoolover);
             }; 
          }
-         await today.forEach(updateTable)
+         today.forEach(updateTable)
       }
       async function updateWeather(){
          let response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Lomma,se&appid=3ab048a5dff57c50e864e1484411f691') //you get your api key once you sign up for openweathermap.org
@@ -78,8 +78,20 @@
          temp.innerHTML=(Math.round((weatherData.main.temp - 273.15) * 100) / 100)+"°C"
       }
       window.addEventListener("load", async (event) => {
-         await setInterval(updateWeather(),300000)
-         await setInterval(update(),5000)
+         await update()
+         await updateWeather()
+         setInterval(() => {
+            window.dispatchEvent(new Event("update"))
+         },5000);
+         setInterval(() => {
+            window.dispatchEvent(new Event("weather"))
+         },300000);
+      });
+      window.addEventListener("weather", async (event) => {
+         await updateWeather()
+      });
+      window.addEventListener("update", async (event) => {
+         await update()
       });
    </script>
 </head>
