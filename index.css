@@ -12,12 +12,11 @@ html {
 }
 
 body {
-  background: linear-gradient(45deg, #13495f, #764be2, #8373c6, #77d3b9);
+  background: transparent;
   background-attachment: fixed;
   height: 100vh;
   padding: 3rem 0;
   margin: 0;
-  color: #555;
   font-family: "Lato", sans-serif;
   font-size: 14px;
 }
@@ -212,19 +211,32 @@ body {
   transform: translate(15px, -12px);
 }
 .weather{
-   position: relative;
+   position: absolute;
+   bottom: 30px;
    height: 100px;
+   width: 90px;
    display:inline-block;padding-left: 40px;
    background: linear-gradient(45deg,#8373c6, #77d3b9);
    border-radius: 10px;
    margin-left: 20px;
+   box-shadow: 0px 10px 50px -10px #203157;
+   vertical-align:middle
 }
 .weather img {
   position:absolute;
-  right: 15px;
+  right: 13%;
   bottom: 20px;
+  border-radius: 10px;
 }
-.weather h3 {
+.weather p {
+  position:absolute;
   padding-top: 50px;
-  padding-right: 10px;
+  right: 20px;
+}#time {
+  position:absolute;
+  top: 16px;
+  left: 5px;  
+  text-wrap:nowrap;
+}#date{
+  padding-top: 50px;
 }
