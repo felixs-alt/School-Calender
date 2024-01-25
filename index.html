@@ -1,5 +1,32 @@
 <head>
    <link rel="stylesheet" href="index.css">
+   <script>
+      async function update(){
+         const response = await fetch("table.json");
+         const table = await response.json();
+         const time = document.getElementById("time")
+         const date = document.getElementById("date")
+         date.innerHTML = new Date().toDateString()
+         time.innerHTML = new Date().toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })
+         if (new Date().getDay() % 6 === 0){
+            return
+         } else {
+            new Date().getDay()
+         }
+      }
+      async function updateWeather(){
+         let response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Lomma,se&appid=3ab048a5dff57c50e864e1484411f691') //you get your api key once you sign up for openweathermap.org
+         weatherData = await response.json()
+         const icon = document.getElementById("weather-icon")
+         const temp = document.getElementById("temp")
+         icon.src = "https://openweathermap.org/img/wn/"+weatherData.weather[0].icon+".png"
+         temp.innerHTML=(Math.round((weatherData.main.temp - 273.15) * 100) / 100)+"C"
+      }
+      setInterval(updateWeather(),300000)
+      window.addEventListener("load", async (event) => {
+         await setInterval(update(),5000)
+      });
+   </script>
 </head>
 <body>
 <div class="mobile-wrapper">
@@ -8,27 +35,17 @@
 
    <header class="header">
       <div class="container">
-         <span>Welcome Back!</span>
-         <h1>Calendar Plan</h1>
-
-         <div class="menu-toggle">
-            <div>
-               <span></span>
-               <span></span>
-               <span></span>
-            </div>
-         </div>
+         <h1>School Schedule</h1>
+         <h2 id="time"></h2>
       </div>
    </header>
-
    <!--======= Today =======-->
-
    <section class="today-box" id="today-box">
       <span class="breadcrumb">Today</span>
-      <h3 class="date-title">May 15, 2018</h3>
-
-      <div class="plus-icon">
-         <i class="ion ion-ios-add"></i>
+      <h3 class="date-title"id="date"></h3>
+      <div class="weather">
+         <img id="weather-icon"></img>
+         <h4 id="temp"></h4>
       </div>
    </section>
 
@@ -41,31 +58,26 @@
 
          </h3>
          <div class="events-wrapper">
-            <div class="event">
-               <i class="ion ion-ios-flame hot"></i>
-               <h4 class="event__point">11:00 am</h4>
-               <span class="event__duration">in 30 minutes.</span>
+            <div class="event active">
+               <h4 class="event__point"></h4>
+               <span class="event__duration"></span>
                <p class="event__description">
-                  Monday briefing with the team (...).
                </p>
             </div>
             <div class="event">
-               <i class="ion ion-ios-flame done"></i>
                <h4 class="event__point">12:00 pm</h4>
                <span class="event__duration">in 1 hour.</span>
                <p class="event__description">
                   Lunch with Paul Mccartney @Burgers House!
                </p>
             </div>
-            <div class="event active">
-               <i class="ion ion-ios-radio-button-on icon-in-active-mode"></i>
+            <div class="event">
                <h4 class="event__point">14:00 pm</h4>
                <p class="event__description">
                   Meet clients from project.
                </p>
             </div>
             <div class="event">
-               <i class="ion ion-ios-flame-outline upcoming"></i>
                <h4 class="event__point">20:45 pm</h4>
                <span class="event__duration">in 45 minutes.</span>
                <p class="event__description">
@@ -73,7 +85,6 @@
                </p>
             </div>
             <div class="event">
-               <i class="ion ion-ios-flame-outline upcoming"></i>
                <h4 class="event__point">23:15 pm</h4>
                <span class="event__duration">in 20 minutes.</span>
                <p class="event__description">
@@ -81,15 +92,6 @@
                </p>
             </div>
          </div>
-         <button class="add-event-button">
-            <span class="add-event-button__title">Add Event</span>
-
-            <span class="add-event-button__icon">
-               <i class="ion ion-ios-star-outline"></i>
-            </span> 
-
-
-         </button>
       </div>
    </section>
 </div>
