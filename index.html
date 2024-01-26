@@ -3,7 +3,7 @@
    <link rel="stylesheet" href="index.css">
    <script>
       async function schoolover(item){
-         item.innerHTML = "SCHOOLS OVER"
+         item.innerHTML = "SCHOOL OVER"
       }
       async function noschool(item){
          item.innerHTML = "NO SCHOOL"
@@ -70,6 +70,13 @@
             }; 
          }
          today.forEach(updateTable)
+         for (let i = 0; i < 4; i++) {
+               Array.from(document.getElementById("events").children).forEach(element => {
+                  if(!element.children[0].innerHTML){
+                     Array.from(element.children).forEach(schoolover)
+                  }
+               });
+         }; 
       }
       async function updateWeather(){
          let response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Lomma,se&appid=3ab048a5dff57c50e864e1484411f691') //you get your api key once you sign up for openweathermap.org
@@ -125,7 +132,7 @@
          <h3>
             Lessons
          </h3>
-         <div class="events-wrapper">
+         <div id="events" class="events-wrapper">
             <div id="lesson0" class="event active">
                <h5 class="event__point"></h5>
                <p class="event__time"></p>
