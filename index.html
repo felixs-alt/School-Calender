@@ -1,3 +1,4 @@
+
 <head>
    <link rel="stylesheet" href="index.css">
    <script>
@@ -21,11 +22,12 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date()
+      dateObj = new Date("2024-01-25T09:03:12")
       function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          console.log(item)
-         if(parseInt(time)>parseInt(item.endTime.replace(':', '')) || lessonNumber > 3){return}
+         if(parseInt(time)>parseInt(item.endTime.replace(':', ''))){return}
+         if(lessonNumber > 3){return}
          if(parseInt(time)<parseInt(item.endTime.replace(':', '')) && parseInt(time)>parseInt(item.startTime.replace(':', ''))){lessonNumber=0}
          console.log(lessonNumber)
          const lesson = document.getElementById("lesson"+lessonNumber)
@@ -96,7 +98,7 @@
    </script>
 </head>
 <body>
-<div class="mobile-wrapper">
+<div id="mobile"class="mobile-wrapper">
 
    <!--======= Header =======-->
 
