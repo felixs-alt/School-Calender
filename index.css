@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 html {
   box-sizing: border-box;
@@ -29,12 +30,11 @@ body {
 .mobile-wrapper {
   background: #535353;
   /* relative with .today-box::before*/
-  z-index: 1;
   /*positive*/
-  position: relative;
   /*---------*/
+  position:relative;
   width: 380px;
-  min-height: 100%;
+  height:fit-content;
   margin: auto;
   padding: 10px 0 20px;
   border-radius: 10px;
