@@ -22,7 +22,7 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date()
+      dateObj = new Date("2024-01-25T13:10:20")
       function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          console.log(item)
@@ -32,6 +32,7 @@
          console.log(lessonNumber)
          const lesson = document.getElementById("lesson"+lessonNumber)
          if(lessonNumber==0){
+            lesson.setAttribute("isactive","true")
             lesson.children[0].innerHTML = item.title
             lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
             console.log(new Date(dateObj.toISOString().slice(0, -14)+item.end))
@@ -39,6 +40,7 @@
             lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
             lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
          }else{
+            lesson.setAttribute("isactive","true")
             lesson.children[0].innerHTML = item.title
             lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
             lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
@@ -69,11 +71,18 @@
                Array.from(document.getElementById("lesson"+i).children).forEach(schoolover);
             }; 
          }
+         for (let i = 0; i < 4; i++) {
+               Array.from(document.getElementById("events").children).forEach(element => {
+                  element.setAttribute("isactive","false")
+               });
+         }; 
          today.forEach(updateTable)
          for (let i = 0; i < 4; i++) {
                Array.from(document.getElementById("events").children).forEach(element => {
-                  if(!element.children[0].innerHTML){
-                     Array.from(element.children).forEach(schoolover)
+                  if(element.getAttribute("isactive") == "false"){
+                     element.style.visibility = "hidden"
+                  } else {
+                     element.style.visibility = "visible"
                   }
                });
          }; 
@@ -133,28 +142,28 @@
             Lessons
          </h3>
          <div id="events" class="events-wrapper">
-            <div id="lesson0" class="event active">
+            <div id="lesson0" isactive="false" style="visibility: hidden;" class="event active">
                <h5 class="event__point"></h5>
                <p class="event__time"></p>
                <span class="event__duration"></span>
                <p class="event__description"></p>
                <p class="event__description"></p>
             </div>
-            <div id="lesson1"class="event">
+            <div id="lesson1" isactive="false" style="visibility: hidden;" class="event">
                <h5 class="event__point"></h5>
                <p class="event__time"></p>
                <span class="event__duration"></span>
                <p class="event__description"></p>
                <p class="event__description"></p>
             </div>
-            <div id="lesson2" class="event">
+            <div id="lesson2" isactive="false" style="visibility: hidden;" class="event">
                <h5 class="event__point"></h5>
                <p class="event__time"></p>
                <span class="event__duration"></span>
                <p class="event__description"></p>
                <p class="event__description"></p>
             </div>
-            <div id="lesson3"class="event">
+            <div id="lesson3" isactive="false" style="visibility: hidden;" class="event">
                <h5 class="event__point"></h5>
                <p class="event__time"></p>
                <span class="event__duration"></span>

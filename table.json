@@ -262,13 +262,13 @@
     {
         "start": "T12:35:00",
         "end": "T13:25:00",
-        "title": "English",
+        "title": "Språk",
         "startTime": "12:35",
         "endTime": "13:25",
         "notes": {
-            "roomInfo": "244",
+            "roomInfo": "",
             "timetableNotes": "",
-            "tutors": "Liljegren, Bengt , Svensson, Jenny "
+            "tutors": ""
         },
         "allDay": false,
         "establishmentName": null,
@@ -294,13 +294,13 @@
     {
         "start": "T08:00:00",
         "end": "T08:55:00",
-        "title": "English",
+        "title": "Språk",
         "startTime": "08:00",
         "endTime": "08:55",
         "notes": {
-            "roomInfo": "250",
+            "roomInfo": "",
             "timetableNotes": "",
-            "tutors": "Liljegren, Bengt , Jonas Melvinger"
+            "tutors": ""
         },
         "allDay": false,
         "establishmentName": null,
@@ -461,7 +461,7 @@
     {
         "start": "T12:10:00",
         "end": "T13:05:00",
-        "title": "Math",
+        "title": "Matte",
         "startTime": "12:10",
         "endTime": "13:05",
         "notes": {
@@ -476,13 +476,13 @@
     {
         "start": "T13:15:00",
         "end": "T14:00:00",
-        "title": "Swedish",
+        "title": "Språk",
         "startTime": "13:15",
         "endTime": "14:00",
         "notes": {
-            "roomInfo": "250",
+            "roomInfo": "",
             "timetableNotes": "",
-            "tutors": "Jonas Melvinger"
+            "tutors": ""
         },
         "allDay": false,
         "establishmentName": null,
