@@ -1,0 +1,22 @@
+<head>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script>
+async function getContent() {
+  try {
+    html2canvas(document.getElementById).then(function(canvas){
+      var oImg = document.createElement("img");
+      console.log(canvas.toDataURL("image/png"))
+      oImg.setAttribute('src', canvas.toDataURL("image/png"));
+      document.body.appendChild(oImg);
+    });
+  } catch (error) {
+    console.log('Request failed', error);
+  }
+  
+}
+getContent()
+    </script>
+</head>
+<body>
+    <iframe id="iframe"src="https://felixs-alt.github.io/School-Calender/index.html"></iframe>
+</body>
