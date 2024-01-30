@@ -23,7 +23,7 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date()
+      dateObj = new Date("2024-01-31T08:30:00")
       function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          if(parseInt(time)>parseInt(item.endTime.replace(':', ''))){return}
