@@ -91,9 +91,6 @@
          const temp = document.getElementById("temp")
          icon.src = "https://openweathermap.org/img/wn/"+weatherData.weather[0].icon+"@2x.png"
          temp.innerHTML=(Math.round((weatherData.main.temp - 273.15) * 100) / 100)+"°C"
-         html2canvas(document.documentElement).then(function(canvas){
-            document.getElementById("img").innerHTML = canvas.toDataURL("image/png")
-         });
       }
       window.addEventListener("load", async (event) => {
          await update()
@@ -112,7 +109,6 @@
          await update()
       });
    </script>
-<a id="img"></a>
 </head>
 <body>
 <div id="mobile"class="mobile-wrapper">

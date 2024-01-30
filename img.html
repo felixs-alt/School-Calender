@@ -1,22 +1,8 @@
 <head>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
-    <script>
-async function getContent() {
-  try {
-    html2canvas(document.getElementById).then(function(canvas){
-      var oImg = document.createElement("img");
-      console.log(canvas.toDataURL("image/png"))
-      oImg.setAttribute('src', canvas.toDataURL("image/png"));
-      document.body.appendChild(oImg);
-    });
-  } catch (error) {
-    console.log('Request failed', error);
-  }
-  
-}
-getContent()
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/@grabzit/js@3.5.2/grabzit.min.js"></script>
+  <script type="text/javascript">
+  GrabzIt("OGM4NDMxMDA4MTQ2NDA3NGEwZWU5MGEwYmQxZDllNjI=").ConvertURL("https://felixs-alt.github.io/School-Calender/",
+  {"target": "#features", "bheight": -1, "height": -1, "width": -1}).Create();
+  </script>
 </head>
-<body>
-    <iframe id="iframe"src="https://felixs-alt.github.io/School-Calender/index.html"></iframe>
-</body>
+<body></body>
