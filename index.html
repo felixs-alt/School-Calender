@@ -23,7 +23,7 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date("2024-01-31T09:21:06")
+      dateObj = new Date()
       function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          if(parseInt(time)>parseInt(item.endTime.replace(':', ''))){return}
@@ -52,11 +52,13 @@
             var items = document.getElementsByClassName("box")
             document.getElementById("today-box").style.boxShadow = "unset"
             document.getElementById("today-box").style.background = "linear-gradient(to left, #1d402c, rgb(15, 107, 64))"
+            document.getElementById("today-box").style.height = "180px"
             for (var i = 0; i < items.length; i++) {
                items.item(i).style.visibility = "hidden"
             }
          } else {
             document.getElementById("today-box").style.background =  "linear-gradient(to left, #3ed437, rgb(15, 107, 64)), #485fed"
+            document.getElementById("today-box").style.height = "154px"
             const date = document.getElementById("date")
             date.innerHTML = dateObj.toDateString()
             const time = document.getElementById("time")
