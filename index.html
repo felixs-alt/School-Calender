@@ -11,7 +11,6 @@
          item.innerHTML = "NO SCHOOL"
       }
       function msToReadableTime(duration) {
-         console.log(duration)
          var milliseconds = Math.floor((duration % 1000) / 100),
          minutes = Math.floor((duration / (1000 * 60)) % 60),
          hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
@@ -27,17 +26,14 @@
       dateObj = new Date()
       function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
-         console.log(item)
          if(parseInt(time)>parseInt(item.endTime.replace(':', ''))){return}
          if(lessonNumber > 3){return}
          if(parseInt(time)<parseInt(item.endTime.replace(':', '')) && parseInt(time)>parseInt(item.startTime.replace(':', ''))){lessonNumber=0}
-         console.log(lessonNumber)
          const lesson = document.getElementById("lesson"+lessonNumber)
          if(lessonNumber==0){
             lesson.setAttribute("isactive","true")
             lesson.children[0].innerHTML = item.title
             lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
-            console.log(new Date(dateObj.toISOString().slice(0, -14)+item.end))
             lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
             lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
             lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
@@ -66,7 +62,6 @@
          } else {
             today = table[dateObj.getDay()-1]
          }
-         console.log(table)
          lessonNumber=0
          if((dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')>parseInt(today[today.length - 1].endTime.replace(':', ''))){
             for (let i = 0; i < 4; i++) {
@@ -97,7 +92,7 @@
          icon.src = "https://openweathermap.org/img/wn/"+weatherData.weather[0].icon+"@2x.png"
          temp.innerHTML=(Math.round((weatherData.main.temp - 273.15) * 100) / 100)+"°C"
          html2canvas(document.documentElement).then(function(canvas){
-            window.image = canvas.toDataURL("image/png")
+            document.getElementById("img").innerHTML = canvas.toDataURL("image/png")
          });
       }
       window.addEventListener("load", async (event) => {
@@ -117,6 +112,7 @@
          await update()
       });
    </script>
+<a id="img"></a>
 </head>
 <body>
 <div id="mobile"class="mobile-wrapper">
