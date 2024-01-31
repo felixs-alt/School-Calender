@@ -2,7 +2,9 @@
 
 <head>
    <link rel="stylesheet" href="https://felixs-alt.github.io/School-Calender/index.css">
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/4.3.0/jquery.rss.min.js"></script>
    <script>
       async function schoolover(item){
          item.innerHTML = "SCHOOL OVER"
@@ -24,7 +26,7 @@
          }
       }
       dateObj = new Date()
-      async function updateTable(item,index){
+      function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          if(parseInt(time)>parseInt(item.endTime.replace(':', ''))){return}
          if(lessonNumber > 3){return}
@@ -32,8 +34,10 @@
 
          const lesson = document.getElementById("lesson"+lessonNumber)
 
-         result = await fetch("http://cors-anywhere.com/https://skolmaten.se/pilangskolan2/")
-         
+         const response = fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.skolmaten.se/pilangskolan2/rss/days/")
+         .then(x => x.json())
+         .then(data => window.File = data.items[0].content);
+
          lesson.setAttribute("isactive","true")
 
          if(item.title == "Lunch"){
