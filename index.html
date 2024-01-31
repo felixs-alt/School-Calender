@@ -24,25 +24,34 @@
          }
       }
       dateObj = new Date()
-      function updateTable(item,index){
+      async function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          if(parseInt(time)>parseInt(item.endTime.replace(':', ''))){return}
          if(lessonNumber > 3){return}
          if(parseInt(time)<parseInt(item.endTime.replace(':', '')) && parseInt(time)>parseInt(item.startTime.replace(':', ''))){lessonNumber=0}
+
          const lesson = document.getElementById("lesson"+lessonNumber)
+
+         result = await fetch("https://skolmaten.se/pilangskolan2/")
+         
+         lesson.setAttribute("isactive","true")
+
+         if(item.title == "Lunch"){
+            lesson.children[3].innerHTML = "Food: "+Food
+            if(dateObj.getDay()=="Fri"){
+               lesson.children[4].innerHTML = "Room: Big"
+            } else {
+               lesson.children[4].innerHTML = "Room: Small"
+            }
+         } else {
+            lesson.children[3].innerHTML = "Teacher(s): "+item.notes.tutors
+         }
+         lesson.children[0].innerHTML = item.title
+         lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
+
          if(lessonNumber==0){
-            lesson.setAttribute("isactive","true")
-            lesson.children[0].innerHTML = item.title
-            lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
             lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
-            lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
-            lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
          }else{
-            lesson.setAttribute("isactive","true")
-            lesson.children[0].innerHTML = item.title
-            lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
-            lesson.children[3].innerHTML = "Teacher: "+item.notes.tutors
-            lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
             lesson.children[2].innerHTML = "starts in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
          }
          lessonNumber++
