@@ -32,7 +32,7 @@
 
          const lesson = document.getElementById("lesson"+lessonNumber)
 
-         result = await fetch("https://skolmaten.se/pilangskolan2/")
+         result = await fetch("http://cors-anywhere.com/https://skolmaten.se/pilangskolan2/")
          
          lesson.setAttribute("isactive","true")
 
@@ -118,7 +118,7 @@
          await updateWeather()
          setInterval(() => {
             window.dispatchEvent(new Event("update"))
-         },1000);
+         },5000);
          setInterval(() => {
             window.dispatchEvent(new Event("weather"))
          },300000);

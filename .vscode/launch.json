@@ -1,11 +1,10 @@
 {
     "configurations": [
+
         {
-            "name": "Python: Module",
-            "type": "python",
+            "command": "sh ./launch.sh",
+            "name": "Run npm start",
             "request": "launch",
-            "module": "http.server",
-            "justMyCode": true
         }
     ]
 }
