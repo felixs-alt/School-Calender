@@ -56,7 +56,7 @@
          if(lessonNumber==0){
             lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
          }else{
-            lesson.children[2].innerHTML = "starts in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
+            lesson.children[2].innerHTML = "starts in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.start)-dateObj))
          }
          lessonNumber++
       }
