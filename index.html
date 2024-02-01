@@ -36,12 +36,12 @@
 
          const response = fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.skolmaten.se/pilangskolan2/rss/days/")
          .then(x => x.json())
-         .then(data => window.File = data.items[0].content);
+         .then(data => window.Food = data.items[0].content);
 
          lesson.setAttribute("isactive","true")
 
          if(item.title == "Lunch"){
-            lesson.children[3].innerHTML = "Food: "+Food
+            lesson.children[3].innerHTML = "Food: "+window.Food
             if(dateObj.getDay()=="Fri"){
                lesson.children[4].innerHTML = "Room: Big"
             } else {
@@ -98,7 +98,7 @@
                   element.setAttribute("isactive","false")
                });
          }; 
-         today.forEach(updateTable)
+         await today.forEach(await updateTable)
          for (let i = 0; i < 4; i++) {
                Array.from(document.getElementById("events").children).forEach(element => {
                   if(element.getAttribute("isactive") == "false"){
