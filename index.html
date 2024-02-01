@@ -25,7 +25,7 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date()
+      dateObj = new Date("2024-02-01T10:07:20")
       function updateTable(item,index){
          const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
          if(parseInt(time)>parseInt(item.endTime.replace(':', ''))){return}
@@ -54,7 +54,11 @@
          lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
 
          if(lessonNumber==0){
-            lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
+            if(parseInt(time)<parseInt(item.startTime.replace(':', ''))){
+               lesson.children[2].innerHTML = "starts in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.start)-dateObj))
+            } else {
+               lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
+            }
          }else{
             lesson.children[2].innerHTML = "starts in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.start)-dateObj))
          }
