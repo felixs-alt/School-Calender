@@ -48,6 +48,10 @@
                lesson.children[4].innerHTML = "Room: Small"
             }
          } else {
+            if(item.notes.roomInfo)
+            lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
+         }
+         if(item.notes.tutors){
             lesson.children[3].innerHTML = "Teacher(s): "+item.notes.tutors
          }
          lesson.children[0].innerHTML = item.title

@@ -208,7 +208,7 @@
         "notes": {
             "roomInfo": "Q4 - Q1",
             "timetableNotes": "",
-            "tutors": "Ander, Måns , Hedberg, Annica "
+            "tutors": "Måns Ander, Annica Hedberg "
         },
         "allDay": false,
         "establishmentName": null,
@@ -283,7 +283,7 @@
         "notes": {
             "roomInfo": "Q6",
             "timetableNotes": "",
-            "tutors": "Löfgren Eriksson, Fredrik "
+            "tutors": "Fredrik Löfgren Eriksson"
         },
         "allDay": false,
         "establishmentName": null,
@@ -330,7 +330,7 @@
         "notes": {
             "roomInfo": "Q5",
             "timetableNotes": "",
-            "tutors": "Nilson, Joel "
+            "tutors": "Joel Nilson"
         },
         "allDay": false,
         "establishmentName": null,
