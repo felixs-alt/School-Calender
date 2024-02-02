@@ -27,11 +27,8 @@
       }
       dateObj = new Date()
       function updateTable(item,index){
-         console.log(item.end)
-         console.log(item.start)
          const end = new Date(dateObj.toISOString().slice(0, -14)+item.end)
          const start = new Date(dateObj.toISOString().slice(0, -14)+item.start)
-         console.log(start)
          if(Date.parse(dateObj)>Date.parse(end)){return}
          if(lessonNumber > 3){return}
          if(dateObj<end && dateObj>start){lessonNumber=0}
