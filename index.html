@@ -27,10 +27,14 @@
       }
       dateObj = new Date()
       function updateTable(item,index){
-         const time = (dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })).replace(':', '')
-         if(parseInt(time)>parseInt(item.endTime.replace(':', ''))){return}
+         console.log(item.end)
+         console.log(item.start)
+         const end = new Date(dateObj.toISOString().slice(0, -14)+item.end)
+         const start = new Date(dateObj.toISOString().slice(0, -14)+item.start)
+         console.log(start)
+         if(Date.parse(dateObj)>Date.parse(end)){return}
          if(lessonNumber > 3){return}
-         if(parseInt(time)<parseInt(item.endTime.replace(':', '')) && parseInt(time)>parseInt(item.startTime.replace(':', ''))){lessonNumber=0}
+         if(dateObj<end && dateObj>start){lessonNumber=0}
 
          const lesson = document.getElementById("lesson"+lessonNumber)
 
@@ -39,7 +43,7 @@
          .then(data => window.Food = data.items[0].content);
 
          lesson.setAttribute("isactive","true")
-
+         
          if(item.title == "Lunch"){
             lesson.children[3].innerHTML = "Food: "+window.Food
             if(dateObj.getDay()=="Fri"){
@@ -58,13 +62,13 @@
          lesson.children[1].innerHTML = item.startTime + " - " + item.endTime
 
          if(lessonNumber==0){
-            if(parseInt(time)<parseInt(item.startTime.replace(':', ''))){
-               lesson.children[2].innerHTML = "starts in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.start)-dateObj))
+            if(dateObj<start){
+               lesson.children[2].innerHTML = "starts in "+msToReadableTime(Date.parse(start)-Date.parse(dateObj))
             } else {
-               lesson.children[2].innerHTML = "ends in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.end)-dateObj))
+               lesson.children[2].innerHTML = "ends in "+msToReadableTime(Date.parse(end)-Date.parse(dateObj))
             }
          }else{
-            lesson.children[2].innerHTML = "starts in "+msToReadableTime((new Date(dateObj.toISOString().slice(0, -14)+item.start)-dateObj))
+            lesson.children[2].innerHTML = "starts in "+msToReadableTime(Date.parse(start)-Date.parse(dateObj))
          }
          lessonNumber++
       }
