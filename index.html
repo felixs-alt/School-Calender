@@ -7,6 +7,7 @@
    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/4.3.0/jquery.rss.min.js"></script>
    <script>
+      var DateTime = luxon.DateTime;
       async function schoolover(item){
          item.innerHTML = "SCHOOL OVER"
       }
@@ -26,7 +27,7 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date()
+      dateObj = new Date(DateTime.now().setZone('Europe/Copenhagen').toISO())
       function updateTable(item,index){
          const end = new Date(dateObj.toISOString().slice(0, -14)+item.end)
          const start = new Date(dateObj.toISOString().slice(0, -14)+item.start)
