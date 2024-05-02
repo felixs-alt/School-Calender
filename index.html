@@ -27,7 +27,7 @@
             return hours + ":" + minutes
          }
       }
-      dateObj = new Date(DateTime.now().setZone('Europe/Copenhagen').toISO())
+      dateObj = new Date(new Date().toLocaleString('en', {timeZone: 'Europe/Copenhagen'}))
       function updateTable(item,index){
          const end = new Date(dateObj.toISOString().slice(0, -14)+item.end)
          const start = new Date(dateObj.toISOString().slice(0, -14)+item.start)
