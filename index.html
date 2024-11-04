@@ -1,13 +1,10 @@
 
 
 <head>
-   <link rel="stylesheet" href="https://felixs-alt.github.io/School-Calender/index.css">
+   <link rel="stylesheet" href="./index.css">
    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-   <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-rss/4.3.0/jquery.rss.min.js"></script>
    <script>
-      var DateTime = luxon.DateTime;
       async function schoolover(item){
          item.innerHTML = "SCHOOL OVER"
       }
@@ -45,11 +42,7 @@
          
          if(item.title == "Lunch"){
             lesson.children[3].innerHTML = "Food: "+window.Food
-            if(dateObj.getDay()=="Fri"){
-               lesson.children[4].innerHTML = "Room: Big"
-            } else {
-               lesson.children[4].innerHTML = "Room: Small"
-            }
+            lesson.children[4].innerHTML = "Stora Matsal"
          } else {
             if(item.notes.roomInfo)
             lesson.children[4].innerHTML = "Room: "+item.notes.roomInfo
@@ -84,11 +77,11 @@
             document.getElementById("today-box").style.background =  "linear-gradient(to left, #3ed437, rgb(15, 107, 64)), #485fed"
             document.getElementById("today-box").style.height = "154px"
             const date = document.getElementById("date")
-            date.innerHTML = dateObj.toDateString()
-            const time = document.getElementById("time")
-            time.innerHTML = dateObj.toLocaleTimeString([], {hour12:false,hour:"numeric",minute: "2-digit" })
+            const day = document.getElementById("day")
+            day.innerHTML = dateObj.toLocaleDateString(undefined,{weekday: 'long'})
+            date.innerHTML = dateObj.toLocaleDateString(undefined,{month: 'long',day: 'numeric'})
          }
-         const response = await fetch("https://felixs-alt.github.io/School-Calender/table.json");
+         const response = await fetch("./table.json");
          const table = await response.json();
          if (dateObj.getDay() % 6 === 0){
             for (let i = 0; i < 4; i++) {
@@ -126,7 +119,7 @@
          const icon = document.getElementById("weather-icon")
          const temp = document.getElementById("temp")
          icon.src = "https://openweathermap.org/img/wn/"+weatherData.weather[0].icon+"@2x.png"
-         temp.innerHTML=(Math.round((weatherData.main.temp - 273.15) * 100) / 100)+"°C"
+         temp.innerHTML=Math.round((weatherData.main.temp - 273.15) * 10) / 10+"°C"
       }
       window.addEventListener("load", async (event) => {
          await update()
@@ -158,13 +151,12 @@
    </header>
    <!--======= Today =======-->
    <section class="today-box" id="today-box">
-      <span class="breadcrumb box">Today</span>
+      <span id="day" class="breadcrumb box"></span>
       <h3 class="date-title box"id="date"></h3>
       <div class="weather box">
          <img id="weather-icon"></img>
-         <p id="temp"></p>
-         <p id="time">Lomma</p>
       </div>
+      <p id="temp"></p>
    </section>
 
    <!--======= Upcoming Events =======-->

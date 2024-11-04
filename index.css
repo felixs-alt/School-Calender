@@ -111,7 +111,8 @@ body {
 }
 
 .today-box .date-title {
-  display:inline-block;
+  position:absolute;
+  top:10px;
   font-size: 20px;
   margin: 7px 0 0 0;
   letter-spacing: 1px;
@@ -216,29 +217,27 @@ body {
    position: absolute;
    bottom: 30px;
    height: 100px;
-   width: 90px;
-   display:inline-block;padding-left: 40px;
-   background: linear-gradient(45deg,#1bad69, #00a846);
+   width: 100px;
+   display:flex;
+   background: linear-gradient(45deg,rgba(27, 173, 105, 0.5), rgba(0, 168, 70, 0.5));
    border-radius: 10px;
-   margin-left: 20px;
-   box-shadow: 0px 10px 50px -10px #203157;
+   margin-left: 200px;
+   box-shadow: inset 15px 15px 30px rgb(0, 148, 60), inset -15px -15px 30px rgb(27, 173, 105);
    vertical-align:middle
 }
 .weather img {
-  position:absolute;
-  right: 13%;
-  bottom: 20px;
-  border-radius: 10px;
+  position:relative;
+  width: 100px;
+  height: 100px;
+  /* Center horizontally*/
+  margin: 0 auto;
 }
-.weather p {
+#temp {
+  font-size:medium;
+  font-weight: 100;
   position:absolute;
-  padding-top: 50px;
-  right: 20px;
-}#time {
-  position:absolute;
-  top: 16px;
-  left: 5px;  
-  text-wrap:nowrap;
-}#date{
+  top:90px;
+}
+#date{
   padding-top: 50px;
 }

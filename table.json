@@ -1,5 +1,5 @@
 [
-[
+    [
         {
             "start": "T09:30:00",
             "end": "T09:50:00",
@@ -104,9 +104,9 @@
             "allDay": false,
             "establishmentName": null,
             "details": "Blå Hall"
-        },
-],
-[
+        }
+    ],
+    [
         {
             "start": "T09:00:00",
             "end": "T10:00:00",
@@ -181,9 +181,9 @@
             "allDay": false,
             "establishmentName": null,
             "details": "338"
-        },
-],
-[
+        }
+    ],
+    [
         {
             "start": "T08:00:00",
             "end": "T09:05:00",
@@ -273,9 +273,9 @@
             "allDay": false,
             "establishmentName": null,
             "details": "331"
-        },
-],
-[
+        }
+    ],
+    [
         {
             "start": "T08:00:00",
             "end": "T08:50:00",
@@ -365,9 +365,9 @@
             "allDay": false,
             "establishmentName": null,
             "details": "222"
-        },
-],
-[
+        }
+    ],
+    [
         {
             "start": "T08:00:00",
             "end": "T08:55:00",
