@@ -24,7 +24,7 @@
             "notes": {
                 "roomInfo": "D12",
                 "timetableNotes": "",
-                "tutors": "Björndahl, Maria "
+                "tutors": "Björndahl, Maria"
             },
             "allDay": false,
             "establishmentName": null,
@@ -37,13 +37,13 @@
             "startTime": "11:15",
             "endTime": "11:45",
             "notes": {
-                "roomInfo": "Stora Ma",
+                "roomInfo": "Stora",
                 "timetableNotes": "",
                 "tutors": ""
             },
             "allDay": false,
             "establishmentName": null,
-            "details": "Stora Ma"
+            "details": "Stora"
         },
         {
             "start": "T11:55:00",
@@ -181,21 +181,6 @@
             "allDay": false,
             "establishmentName": null,
             "details": "338"
-        },
-        {
-            "start": "T15:15:00",
-            "end": "T16:15:00",
-            "title": "Extra Studietid",
-            "startTime": "15:15",
-            "endTime": "16:15",
-            "notes": {
-                "roomInfo": "244",
-                "timetableNotes": "",
-                "tutors": ""
-            },
-            "allDay": false,
-            "establishmentName": null,
-            "details": "244"
         },
 ],
 [
@@ -415,25 +400,10 @@
         },
         {
             "start": "T10:20:00",
-            "end": "T10:50:00",
+            "end": "T11:40:00",
             "title": "NO",
             "startTime": "10:20",
             "endTime": "10:50",
-            "notes": {
-                "roomInfo": "D12",
-                "timetableNotes": "",
-                "tutors": "Björndahl, Maria "
-            },
-            "allDay": false,
-            "establishmentName": null,
-            "details": "D12"
-        },
-        {
-            "start": "T10:50:00",
-            "end": "T11:40:00",
-            "title": "TK",
-            "startTime": "10:50",
-            "endTime": "11:40",
             "notes": {
                 "roomInfo": "D12",
                 "timetableNotes": "",
